@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basics Initiative</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Bootstrap 4.5 CSS -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<!----Stripe -->
+	<script src="https://js.stripe.com/v3/"></script>
+	
+	
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<body class="form-body">
+<nav class="navbar bg-light navbar-light navbar-expand-lg ">
+	<div class="container">
+		<a href="index.html" class="navbar-brand">Basics Initiative</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="about.html" class="nav-link">About Us</a>
+				</li>
+				
+				<li class="nav-item">
+					<a href="samplevideo.html" class="nav-link">Free Tutorials</a>
+				</li>
+				<li class="nav-item">
+					<a href="classes.html" class="nav-link">Classes</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</nav>
+		<form class="col-lg-11 justify-content-center">
+
+			<div class="justify-content-center offset-lg-6 py-5">
+				<div class="form-group">
+					<h1>Schedule a Lesson!</h1>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter Your Name" id="name-input">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter a 10 digit Phone Number" id="phone-input">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter Your Email" id="email-input">
+				</div>
+				
+
+				<div class="form-group">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="live-classes" value="Live Classes">
+					  <label class="form-check-label" for="inlineRadio1">Live Classes</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="individual-delivery" value="1 on 1 + Free Delivery">
+					  <label class="form-check-label" for="inlineRadio2">1 on 1 + Free Delivery</label>
+					</div>
+
+				</div>
+
+				<div class="row text-center padding pt-6" id="class-dates">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="card">
+							<img class="card-img-top" src="">
+							<div class="card-body">
+								<h3>Date</h3>
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="exampleRadios" id="class-date-1" value="some date 1">
+								</div>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="card">
+							<img class="card-img-top" src="">
+							<div class="card-body">
+								<h3>Date</h3>
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="exampleRadios" id="class-date-2" value="some date 2">
+								</div>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="card">
+							<img class="card-img-top" src="">
+							<div class="card-body">
+								<h3>Date</h3>
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="exampleRadios" id="class-date-3" value="some date 3">
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="row text-center padding">
+					<div class="col-xs-12 col-sm-6 col-md-6 pb-2">
+						<button id="checkout-button" type="button" class="payment-button btn btn-dark">Continue to Checkout</button>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div id="paypal-button"></div>
+					</div>
+					
+				</div>
+				<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+				<script>
+				  	let status;
+				  	
+				  // assign function to onclick property of checkbox
+					document.getElementById('live-classes').onclick = function() {
+					    // call toggleSub when checkbox clicked
+					    // toggleSub args: checkbox clicked on (this), id of element to show/hide
+					    toggleSub(this, 'class-dates');
+					};
+					document.getElementById('individual-delivery').onclick = function() {
+					    // call toggleSub when checkbox clicked
+					    // toggleSub args: checkbox clicked on (this), id of element to show/hide
+					    toggleSub(this, 'class-dates');
+					};
+
+					// called onclick of checkbox
+					function toggleSub(box, id) {
+					    // get reference to related content to display/hide change to FALSE if it isnt checked
+					    
+					    var el = document.getElementById(id);
+					    
+					    if (box.value === 'Live Classes') {
+					    	
+					        el.style.display = 'flex';
+					    } else {
+					    	
+					        el.style.display = 'none';
+					    }
+					};
+				  document.getElementById("paypal-button").addEventListener("click", function() {
+					  validateData()
+					});		
+				  
+				  //paypal button
+				  paypal.Button.render({
+				    // Configure environment
+				    env: 'sandbox',
+				    client: {
+				      sandbox: 'demo_sandbox_client_id',
+				      production: 'demo_production_client_id'
+				    },
+				    // Customize button (optional)
+				    locale: 'en_US',
+				    style: {
+				      size: 'medium',
+				      color: 'gold',
+				      shape: 'pill',
+				    },
+
+				    // Enable Pay Now checkout flow (optional)
+				    commit: true,
+
+				    // Set up a payment
+				    payment: function(data, actions) {
+				    	let cost;
+				    	if (document.getElementById('live-classes').checked) {
+				        	let cost = '0.03';
+				        }
+				        else if (document.getElementById('individual-delivery').checked) {
+				        	let cost = '0.06';
+				        }
+
+				      return actions.payment.create({
+				        transactions: [{
+				          amount: {
+				            total: '0.01',
+				            currency: 'USD'
+				          }
+				        }]
+				      });
+				    },
+				    // Execute the payment
+				    onAuthorize: function(data, actions) {
+				      return actions.payment.get()
+					      .then(function (paymentDetails) {
+					      	console.log(paymentDetails);
+					      	
+					      	writeToTable(paymentDetails);
+					        // Show a confirmation using the details from paymentDetails
+					        // Then listen for a click on your confirm button
+					        
+					            return actions.payment.execute()
+					              .then(function () {
+					              	document.location.href = "confirmationpage.html";
+					              });
+					          });
+					      
+				      
+				        
+				    }
+				  }, '#paypal-button');
+
+
+				  //stripe button checkout
+				   	var stripe = Stripe('pk_test_51HQynJGNtnHiw0AlWo2s4QLMKmEyuxcEP8ab6HQlWqQd8enJgr8IXmnHLhSy6IyWZUunxh7Tv3pU28tLLc0Wifvz00jKEEa1XX');
+				    var checkoutButton = document.getElementById('checkout-button');
+				    checkoutButton.addEventListener('click', function() {
+				        
+		            	fetch('https://nm4fvzi64a.execute-api.us-west-2.amazonaws.com/prod/stripeshopapi', {
+					    	method: 'POST',
+					    })
+					    
+					    .then(function(response) {
+					    	  
+					          return response.json();
+
+					    })
+					    .then(function(session) {
+					    	  console.log(session);
+					          return stripe.redirectToCheckout({ sessionId: session.sessionId });
+					    })
+					    .then(function(result) {
+					          // If `redirectToCheckout` fails due to a browser or network
+					          // error, you should display the localized error message to your
+					          // customer using `error.message`.
+					        if (result.error) {
+					            alert(result.error.message);
+					         }
+					     })
+					    .catch(function(error) {
+
+					        console.error('Error:', error);
+					     	});
+		            	
+					    
+
+				    });
+
+				    
+				  //data-validation
+				  function validateData() {
+				  	var Namere = /[A-Za-z]{1}[A-Za-z]/;
+				            if (!Namere.test($("#name-input").val())) {
+				                         alert ("Name can not less than 2 char");
+				                return;
+				            }
+		            var mobilere = /[0-9]{10}/;
+				            if (!mobilere.test($("#phone-input").val())) {
+				                alert ("Please enter a valid mobile number");
+				                return;
+				            }
+				  }
+				  
+				  //initializes the data 
+				  function writeToTable(paymentDetails) {
+				  	status = paymentDetails.state;
+				  	console.log(status);
+				  	if (status === "created") {
+				  		const URL = "https://nm4fvzi64a.execute-api.us-west-2.amazonaws.com/prod/basicinitwritetotable";
+				  		//data validation
+				  		var Namere = /[A-Za-z]{1}[A-Za-z]/;
+				            if (!Namere.test($("#name-input").val())) {
+				                         alert ("Name can not less than 2 char");
+				                return;
+				            }
+		            	var mobilere = /[0-9]{10}/;
+				            if (!mobilere.test($("#phone-input").val())) {
+				                alert ("Please enter a valid mobile number");
+				                return;
+				            }
+				        let name = $("#name-input").val();
+				        let phone = $("#phone-input").val();
+				        let email = $("#email-input").val();
+				        let classes;
+				        let date;
+				        //checks for classes
+				        if (document.getElementById('live-classes').checked) {
+				        	classes = $("#live-classes").val();
+				        }
+				        else if (document.getElementById('individual-delivery').checked) {
+				        	classes = $("individual-delivery").val();
+				        	date = "TBA"; //YOU NEED TO MAKE CARDS FOR THE INDIVIDUAL 1 on 1 ORDERS
+				        }
+				        
+				        //checks for dates
+				        if (document.getElementById('class-date-1').checked) {
+				        	date = $("#class-date-1").val();
+				        }
+				        else if (document.getElementById('class-date-2').checked) {
+				        	date = $("#class-date-2").val();
+				        }
+				        else if (document.getElementById('class-date-3').checked) {
+				        	date = $("#class-date-3").val();
+				        }
+				        console.log(classes);
+				        console.log(date);
+
+				        let data = {
+				        	name: name,
+				        	phone: phone,
+				        	classes: classes, 
+				        	email: email,
+				        	date: date
+				        };
+				        $.ajax({
+		            		type:"POST",
+		            		url: "https://nm4fvzi64a.execute-api.us-west-2.amazonaws.com/prod/basicinitwritetotable",
+		            		dataType: "json",
+		            		crossDomain: "true",
+		            		contentType: "application/json; charset=utf-8",
+		            		data: JSON.stringify(data),
+
+
+		            		success: function() {
+		            			alert("Successful");
+		            			
+		            			
+		            		},
+		            		error: function() {
+								//alert("unsuccessful")
+							}
+
+		            	});
+				        
+				  	}
+				  }
+				  
+
+				</script>
+
+				
+			</div>
+			
+		</form>
+		
+			
+
+		
+
+
+	
+	<!---jquery--->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Bootstrap 4.5 JS -->
+	<script src="bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- Popper JS -->
+	<script src="popper.min.js"></script>
+	<!-- Font Awesome -->
+	<script src="all.min.js"></script>
+
+</body>
+</html>

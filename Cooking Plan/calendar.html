@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basics Initiative</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Bootstrap 4.5 CSS -->
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!--date time--->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.css' rel='stylesheet'/>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.css' rel='stylesheet'/>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+
+          eventClick: function(info){
+          	var eventObj = info.event;
+          	window.open("Sign-Up.html");
+          },
+
+          initialView: 'dayGridMonth',
+
+          events: [
+          	{
+          		title: 'Class1',
+          		start: '2020-10-10'
+          	},
+          	{
+          		title: 'Class2',
+          		start: '2020-10-17',
+          	},
+          	{
+          		title: 'Class3',
+          		start: '2020-10-24'
+          	}
+          ] 
+        });
+        calendar.setOption('aspectRatio', 1.5);
+        calendar.render();
+      });
+
+    </script>
+ 
+  <body>
+</head>
+<body>
+<nav class="navbar bg-light navbar-light navbar-expand-lg">
+	<div class="container">
+		<a href="index.html" class="navbar-brand">Basics Initiative</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="about.html" class="nav-link">About Us</a>
+				</li>
+				
+				<li class="nav-item">
+					<a href="samplevideo.html" class="nav-link">Recipes</a>
+				</li>
+				<li class="nav-item">
+					<a href="classes.html" class="nav-link">Classes</a>
+				</li>
+				<li class="nav-item">
+					<a href="calendar.html" class="nav-link active">Calendar</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</nav>
+<div class="container-fluid mt-5">
+	<div class="row text-center">
+		<div class="col-12">
+			<h1 >Lesson Calendar</h1>
+		</div>
+		<hr>	
+	</div>
+</div>
+	<div id='calendar' class="px-4"></div>
+	
+</body>
+</html>

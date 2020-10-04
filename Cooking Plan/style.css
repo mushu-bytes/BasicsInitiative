@@ -1,0 +1,341 @@
+/*-- Body Reset --*/
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: #616971;
+}
+
+/*============= NAVIGATION =============*/
+/*navbar in general*/
+.navbar{
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  box-shadow: 0 .5rem .5rem rgba(0,0,0, 0.1);
+  z-index: 1;
+}
+/*the actual items*/
+.nav-item{
+  padding: .5rem;
+}
+/*the link itself*/
+.nav-link{
+  color: #5b5555!important;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: #4981b3!important;
+}
+
+
+/*============= CAROUSEL =============*/
+
+#carousel{
+  box-shadow: 0 1rem 1rem rgba(0,0,0, 0.5);
+}
+.carousel-inner {
+  max-height: 38rem!important
+}
+
+
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active{
+  transition: transform 1s ease;
+}
+
+/*-- Carousel Content --*/
+.carousel-caption{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+.bg-custom{
+  background-color: rgba(0,0,0,.4);
+  color: white;
+  border-radius: 1rem;
+}
+.carousel-caption h1{
+  font-size: 3.8rem;
+  text-shadow: .1 .1rem .3rem rgba(0,0,0, 1);
+}
+.border-primary{
+  border-top: .2rem solid #4981b3!important;
+}
+.carousel-caption h3{
+  font-size: 2.2rem;
+  text-shadow: .1 .1rem .3rem rgba(0,0,0, 1);
+}
+.btn-lg{
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-width: medium;
+}
+
+
+/*===== Meet the Team =====*/
+.teamheading{
+  padding-top: 4rem;
+  padding-bottom: 4rem
+}
+
+
+/*-- TWO COlumn--*/
+.container-shadow {
+  box-shadow: 0 1rem 1rem rgba(0,0,0, 0.05);
+}
+
+
+/*============= FOOTER =============*/
+footer{
+  background-color: #383838;
+  padding: 1rem 2rem 3rem;
+}
+footer a {
+  height: 3.5rem;
+  margin: 1.5rem auto;
+}
+footer p, footer a {
+  color: white;
+  text-decoration: none;
+}
+footer .svg-inline--fa{
+  font-size: 2.3rem;
+}
+ul.social{
+  list-style-type: none;
+  justify-content: center;
+  display: flex;
+  
+}
+ul.social li{
+  margin: 0 auto;
+}
+
+.youtube{
+  padding-right: 5rem;
+}
+.instagram{
+  padding-left: 5rem;
+}
+
+/*============= Form =============*/
+#class-dates{
+  display: none;
+}
+.form-body{
+  background: url("img/OrderPageBackground.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.main-section{
+  margin: 0 auto;
+  margin-top: 130px;
+  padding: 0; 
+}
+.modal-content{
+  background-color: #3b4652;
+  opacity: .95;
+  padding: 0 18px;
+  box-shadow: 0px 0px 3px #848484;
+  padding-top: 25px;
+}
+.user-img{
+  margin-top: -50px;
+  margin-bottom: 35px;
+}
+.user-img img{
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px #848484;
+}
+.form-group{
+  margin-bottom: 25px;
+}
+.form-group input{
+  height: 42px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+}
+.form-group select{
+  height: 42px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+}
+.form-button{
+  width: 40%;
+  margin: 5px 5px; 25px;
+  background-color: #25a890;
+  color: white;
+  font-size: 19px;
+  padding: 7px 0px;
+  border-radius: 5px;
+  margin-top: 30px;
+
+}
+.btn:hover, .btn:focus{
+  background-color: #25a890;
+  border-bottom: 4px solid #25a890;
+
+}
+.svg-inline--fa{
+  font-size: 20px;
+  margin-left: 7px;
+}
+
+/*Payment Buttons*/
+.payment-button{
+ border-radius: 20px;
+ width: 15.5rem;
+}
+/*============= COOKING VIDEOS =============*/
+.Cooking-Video{
+  width: 70rem;
+  height: 30rem;
+}
+.Cooking-Recipe{
+  width: 70rem;
+}
+/*============= SIGN UP BODY =============*/
+.SignUpBody{
+  background: rgb(219, 226, 226);
+}
+.SignUpContent{
+  background: white;
+  border-radius: 30px;
+}
+.SignUpImg{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.SignUpButton{
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+
+}
+.SignUpButton:hover{
+  background: white;
+  border: 1px solid;
+  color: black;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 1199px (xl) */
+@media (max-width: 1199.98px) {
+.carousel-caption h1{
+  font-size: 2.8rem;
+  
+}
+
+.carousel-caption h3{
+  font-size: 1.8rem;
+  
+}
+/* Devices under 991px (md) */
+@media (max-width: 991.98px) {
+  .carousel-caption h1{
+    font-size: 2.5rem;
+    
+  }
+  
+  .carousel-caption h4{
+    font-size: 1.5rem;
+    
+  }
+  .carousel-caption{
+    top: 42.5%;
+  }
+  .carousel-caption p {
+    font-size: 1.15rem;
+  }
+  btn-lg{
+    font-size: .95rem;
+  }
+  
+}
+@media(max-width: 576px){
+  
+  .carousel-caption h1{
+    font-size: 1.5rem;
+    
+  }
+
+  .carousel-caption h4{
+    font-size: 0.75rem;
+    
+  }
+  btn-lg{
+    font-size: .65rem;
+  }
+  .carousel-caption{
+    top: 35%;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+/*-- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/*-- Fixed Background Image --*/
+.fixed-background {
+  position: relative;
+  width: 100%;
+  z-index: 1000!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999 !important;
+}
+.fixed {
+  z-index: -999!important;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
