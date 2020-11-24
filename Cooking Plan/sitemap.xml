@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+		xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+	<url>
+		<loc>https://sacnutritional.org/</loc>
+		<video:video>
+
+			<video:thumbnail_loc>https://sacnutritional.org/zoom.jpg</video:thumbnail_loc>
+		    <video:title>index-video</video:title>
+	        <video:description>Pouring flour onto dough</video:description>
+	        <video:content_loc>https://sacnutritional.org/IndexVid.mp4</video:content_loc>
+	        <video:duration>5</video:duration>
+	    </video:video>
+
+	    <image:image>
+	      <image:loc>https://sacnutritional.org/Ravioli.jpg</image:loc>
+	    </image:image>
+
+	    <image:image>
+	      <image:loc>https://sacnutritional.org/Adam.jpeg</image:loc>
+	    </image:image>
+
+	    <image:image>
+	      <image:loc>https://sacnutritional.org/Damon.jpg</image:loc>
+	    </image:image>
+
+	    <image:image>
+	      <image:loc>https://sacnutritional.org/Dana.jpg</image:loc>
+	    </image:image>
+	</url>
+	
+	<url>
+		<loc>https://sacnutritional.org/about.html</loc>
+		<image:image>
+			<image:loc>https://sacnutritional.org/zoom.jpg</image:loc>
+	    </image:image>
+	</url>
+
+	<url>
+		<loc>https://sacnutritional.org/samplevideo.html</loc>
+		<image:image>
+			<image:loc>https://sacnutritional.org/Tofu%20Tacos%20Thumbnail.jpg</image:loc>
+	    </image:image>
+	    <image:image>
+			<image:loc>https://sacnutritional.org/Chard%20Rice%20Thumbnail.jpg</image:loc>
+	    </image:image>
+	</url>
+
+	<url>
+		<loc>https://sacnutritional.org/Sign-Up.html</loc>
+		<image:image>
+			<image:loc>https://sacnutritional.org/SignUpPic.jpg</image:loc>
+	    </image:image>
+	    
+	</url>
+	<url>
+		<loc>https://sacnutritional.org/Vegetarian-Tofu-Tacos.html</loc>
+		<video:video>
+
+			<video:thumbnail_loc>https://sacnutritional.org/Tofu%20Tacos%20Thumbnail.jpg</video:thumbnail_loc>
+		    <video:title>Tofu Tacos</video:title>
+	        <video:description>Making Tofu Tacos</video:description>
+	        <video:player_loc>https://www.youtube.com/embed/sCLM9uUciLc</video:player_loc>
+	        <video:duration>265</video:duration>
+	    </video:video>
+	    
+	</url>
+	<url>
+		<loc>https://sacnutritional.org/Chard-Rice.html</loc>
+		<video:video>
+
+			<video:thumbnail_loc>https://sacnutritional.org/Chard%20Rice%20Thumbnail.jpg</video:thumbnail_loc>
+		    <video:title>Chard Rice</video:title>
+	        <video:description>Making Chard Rice</video:description>
+	        <video:player_loc>https://www.youtube.com/embed/S6wkDWo8lws</video:player_loc>
+	        <video:duration>121</video:duration>
+	    </video:video>
+	    
+	</url>
+
+
+</urlset>

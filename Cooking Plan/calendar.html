@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179941923-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179941923-1');
+</script>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Basics Initiative</title>
+	<title>Sac Nutritional</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Bootstrap 4.5 CSS -->
 	
@@ -33,20 +43,20 @@
 
           initialView: 'dayGridMonth',
 
-          events: [
+          /*events: [
           	{
-          		title: 'Class1',
+          		title: 'Test 1',
           		start: '2020-10-10'
           	},
           	{
-          		title: 'Class2',
+          		title: 'Test 2',
           		start: '2020-10-17',
           	},
           	{
-          		title: 'Class3',
+          		title: 'Test 3',
           		start: '2020-10-24'
           	}
-          ] 
+          ] */
         });
         calendar.setOption('aspectRatio', 1.5);
         calendar.render();
@@ -59,7 +69,7 @@
 <body>
 <nav class="navbar bg-light navbar-light navbar-expand-lg">
 	<div class="container">
-		<a href="index.html" class="navbar-brand">Basics Initiative</a>
+		<a href="index.html" class="navbar-brand">Sac Nutritional</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
@@ -78,7 +88,7 @@
 					<a href="samplevideo.html" class="nav-link">Recipes</a>
 				</li>
 				<li class="nav-item">
-					<a href="classes.html" class="nav-link">Classes</a>
+					<a href="Sign-Up.html" class="nav-link">Classes</a>
 				</li>
 				<li class="nav-item">
 					<a href="calendar.html" class="nav-link active">Calendar</a>
@@ -97,6 +107,7 @@
 	</div>
 </div>
 	<div id='calendar' class="px-4"></div>
+
 	
 </body>
 </html>

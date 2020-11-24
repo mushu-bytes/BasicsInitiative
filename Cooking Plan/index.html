@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179941923-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-179941923-1');
+	</script>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Basics Initiative</title>
+	<title>Sac Nutritional</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Bootstrap 4.5 CSS -->
-	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- Style CSS -->
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="fixed.css">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
@@ -19,7 +30,7 @@
 
 <nav class="navbar bg-light navbar-light navbar-expand-lg">
 	<div class="container">
-		<a href="index.html" class="navbar-brand">Basics Initiative</a>
+		<a href="index.html" class="navbar-brand">Sac Nutritional</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
@@ -38,7 +49,7 @@
 					<a href="samplevideo.html" class="nav-link">Recipes</a>
 				</li>
 				<li class="nav-item">
-					<a href="classes.html" class="nav-link">Classes</a>
+					<a href="Sign-Up.html" class="nav-link">Classes</a>
 				</li>
 				<li class="nav-item">
 					<a href="calendar.html" class="nav-link">Calendar</a>
@@ -49,114 +60,33 @@
 	</div>
 </nav>
 
-<!-----video background
-<div class="video-background">
+
+<div class="video-background no-gutters">
 	<div class="video-wrap">
 		<div id="video">
-			<video id="bgvid" autoplay loop muted playsinline>
-				<source src="" type="">
-			</video>
-			
+			<video id="bgvid" title="index-video" autoplay loop muted playsinline>
+				<source src="IndexVid.mp4" type="video/mp4">
+			</video>	
 		</div>
 	</div>
-	
-</div>---->
-<!--- Image Slider -->
-<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="6500">
-	<!-------Carousel Content --------->
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<img src="img/carousel/1.jpg" class="w-100">
-			<div class="carousel-caption">
-				
-				<div class="container">
-					
-					<div class="row justify-content-center">
-						
-						<div class="col-8 bg-custom d-md-block py-3 px-0 ">
-							<h1>BASICS INITIATIVE</h1>
-							<div class="border-top border-primary w-50 mx-auto my-3"></div>
-							<h4 class="pb-3">Healthy Cooking For All</h4>
-							<a href="classes.html" class="btn btn-primary btn-lg ml-2 mr-2">Start Learning Now</a>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>
-		</div>
-
-		<div class="carousel-item">
-			<img src="img/carousel/2.jpg" class="w-100">
-			<div class="carousel-caption">
-				
-				<div class="container">
-					
-					<div class="row justify-content-end text-right">
-						
-						<div class="col-5 bg-custom  d-md-block py-3 px-0 pr-3">
-							
-							<p class="lead pb-3">Free Instructive Videos on Demand</p>
-							<a href="samplevideo.html" class="btn btn-danger btn-lg ml-3">View Demos</a>
-							
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>			
-		</div>
-
-		<div class="carousel-item">
-			<img src="img/carousel/3.jpg" class="w-100">
-			<div class="carousel-caption">
-				
-				<div class="container">
-					
-					<div class="row justify-content-start text-left">
-						
-						<div class="col-7 bg-custom d-md-block py-3 px-0 pl-3">
-							
-							<h4 class="pb-3">All Proceeds are Donated</h4>
-							<p class="lead"> 100% of the Money Earned Will Be Directly Donated to </p>
-							<a href="about.html" class="btn btn-primary btn-lg">Learn More</a>
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>			
-		</div>
-
-	</div>
-
-	<!------- End Carousel Content --------->
-	
-	<!------- Previous and Next Buttons --------->
-	<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>	
 </div>
-	<!------- End Previous and Next Buttons --------->
+<div class="caption text-center">
+	<h1>Sac Nutritional</h1>
+	<h3>Promoting Healthy, Affordable Food Throughout the 916</h3>
+	<a class="btn btn-outline-light btn-lg" href="Sign-Up.html"> Sign Up Now</a>
+</div>
+
+
 <!--- TWO COLUMN -->
 <div class="container my-5 container-shadow">
 	<div class="row py-4">
 		<div class="col-lg-4 mb-4 my-lg-auto">
 			<h1 class="text-dark font-weight-bold mb-3">Mission Statement</h1>
-			<p class="mb-4">Basics Initiative is a project dedicated for the advocacy and education of healthy choices and positive lifestyles. </p>
+			<p class="mb-4">Sac Nutritional is dedicated for the advocacy and education of healthy, affordable lifestyles. </p>
 			<a href="about.html" class="btn btn-outline-dark btn-lg">READ MORE</a>
 		</div>
 		<div class="col-lg-8">
-			<img src="img/code.jpg" class="w-100">
+			<img src="Ravioli.jpg" class="w-100 corners">
 		</div>
 		
 	</div>
@@ -178,28 +108,28 @@
 <div class="row padding">
 	<div class="col-md-4">
 		<div class="card">
-			<img class="card-img-top" src="img/Adam.jpg">
+			<img class="card-img-top" src="Adam.jpeg">
 			<div class="card-body">
 				<h4 class="card-title">Adam Wadhwani</h4>
-				<p class="card-text">Adam Wadhwani is a michelin 20 star chef and is friends with the rat from ratatouille</p>
+				<p class="card-text">My name is Adam Wadhwani and I am a 17 year-old high school student from Sacramento, California. I have spent the majority of my life with an enthusiasm for being in the kitchen. I have cooked as part of private events, national competitions, fundraisers, community benefit projects, and as an instructor for the past four years at the Sacramento Natural Foods Coop cooking school. More than anything, I love sharing my knowledge of cooking with others and can’t wait to do it here.</p>
 			</div>
 		</div>
 	</div>
 	<div class="col-md-4">
 		<div class="card">
-			<img class="card-img-top" src="img/Damon.jpg">
+			<img class="card-img-top" src="Damon.jpg">
 			<div class="card-body">
 				<h4 class="card-title">Damon Lin</h4>
-				<p class="card-text">Damon is like bill gates but hotter</p>
+				<p class="card-text">My name is Damon Lin and I am also a 17 year-old high school student from Sacramento, California. Like some of the kids my age, I have very little knowledge or experience cooking sustainable, healthy, and affordable meals. Going off to college and moving out will definitely challenge me to take better care of myself, and this project will certainly provide me with the tools to do so. </p>
 			</div>
 		</div>
 	</div>
 	<div class="col-md-4">
 		<div class="card">
-			<img class="card-img-top" src="img/CoOp.jpg">
+			<img class="card-img-top" src="danapic.JPG">
 			<div class="card-body">
-				<h4 class="card-title">Sac Co-Op Person</h4>
-				<p class="card-text">Such a hottie</p>
+				<h4 class="card-title">Dana Andrak</h4>
+				<p class="card-text">One of the first things I noticed when I moved to Sacramento was the abundance of beautiful fruits and vegetables all year long. It didn’t take long for me to realize, how much good food was being thrown away and how many people were hungry. For me food is love, self love, and love for others and an essential for keeping us healthy both physically and mentally. Nutritious food is within everyones reach, especially in Sacramento! Teaching people about label reading, how to shop on a budget, and cooking healthy meals is an especially gratifying way to connect with and give back to my community.</p>
 			</div>
 		</div>
 	</div>
@@ -212,8 +142,8 @@
 		<div class="row text-light text-center py-4 justify-content-center">
 
 			<div class="col-sm-10 col-md-8 col-lg-6">
-				<a href="index.html" class="navbar-brand">Basics Initiative</a>
-				<p>Our Program is Dedicated for the Wellbeing and Nutrition</p>
+				<a href="index.html" class="navbar-brand">Sac Nutritional</a>
+				<p>Our Program is Dedicated for the Wellbeing and Nutrition of All People</p>
 				<ul class="social pt-3 justify-content-center">
 					<li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
 					<li class="youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
@@ -226,13 +156,11 @@
 </footer>
 
 
-	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
-	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
+	
 
 </body>
 </html>

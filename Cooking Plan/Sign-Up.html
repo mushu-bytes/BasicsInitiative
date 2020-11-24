@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179941923-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179941923-1');
+</script>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Basics Initiative</title>
+	<title>Sac Nutritional</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Bootstrap 4.5 CSS -->
-	<link rel="stylesheet" href="bootstrap.min.css">
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
 	
@@ -19,7 +29,7 @@
 <body class="SignUpBody">
 <nav class="navbar bg-light navbar-light navbar-expand-lg ">
 	<div class="container">
-		<a href="index.html" class="navbar-brand">Basics Initiative</a>
+		<a href="index.html" class="navbar-brand">Sac Nutritional</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
@@ -38,7 +48,7 @@
 					<a href="samplevideo.html" class="nav-link">Recipes</a>
 				</li>
 				<li class="nav-item">
-					<a href="classes.html" class="nav-link">Classes</a>
+					<a href="classes.html" class="nav-link active">Classes</a>
 				</li>
 				<li class="nav-item">
 					<a href="calendar.html" class="nav-link">Calendar</a>
@@ -48,69 +58,130 @@
 		</div>
 	</div>
 </nav>
-<section class="Form my-4 mx-5">
+<section class="Form form-margins">
 	<div class="container">
 		<div class="row SignUpContent no-gutters">
 			
-			<div class="col-lg-5 pt-5 pl-5">
-				<h1 class="font-weigh-bold py-3">Sign Up Now!</h1>
+			<div class="col-lg-5 pt-5 pl-5 sign-up-form">
+				<h1 class="font-weigh-bold py-3">Sign Up Currently Unavailable</h1>
 				<form>
 					<div class="form-row">
 						<div class="col-lg-10">
-							<input type="Name" placeholder="Name" class="form-control my-3 p-4" id="name-input">
+							<input type="Name" placeholder="Name" class="form-control my-3 p-3" id="name-input">
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="col-lg-10">
-							<input type="phone" placeholder="Phone Number (i.e 9161234567)" class="form-control my-3 p-4" id="phone-input">
+							<input type="phone" placeholder="Phone Number (i.e 9161234567)" class="form-control my-3 p-3" id="phone-input">
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="col-lg-10">
-							<input type="email" placeholder="Email-Address" class="form-control my-3 p-4" id="email-input">
+							<input type="email" placeholder="Email-Address" class="form-control my-3 p-3" id="email-input">
 						</div>
 					</div>
 					
 					<div class="form-col">
-						<div class="form-check py-2">
+						<div class="form-check py-2 pl-5">
 							<input type="checkbox" name="date-1" class="form-check-input" id="class-date-1" value="October 10">
-							<label class="form-check-label" for="class-date-1">October 10</label>
+							<label class="form-check-label" for="class-date-1">Unavailable</label>
 						</div>
-						<div class="form-check py-2">
+						<div class="form-check py-2 pl-5">
 							<input type="checkbox" name="date-2" class="form-check-input" id="class-date-2" value="October 17">
-							<label class="form-check-label" for="class-date-2">October 17</label>
+							<label class="form-check-label" for="class-date-2">Unavailable</label>
 						</div>
-						<div class="form-check py-2">
+						<div class="form-check py-2 pl-5">
 							<input type="checkbox" name="date-3" class="form-check-input" id="class-date-3" value="October 24">
-							<label class="form-check-label" for="class-date-3">October 24</label>
+							<label class="form-check-label" for="class-date-3">Unavailable</label>
 						</div>
 
 					</div>
 					
+					
 					<!----sign up button ---->
 					<div class="form-row">
 						<div class="col-lg-10">
-							<button type="button" class="btn-1 my-4 p-4 SignUpButton" onclick="writeToTable()">Sign Up</button>
+							<button type="button" class="my-4 payment-button btn btn-dark SignUpButton" onclick="writeToTable()">Sign Up</button>
 						</div>
 					</div>
+					<!----confirm----->
+					<div class="modal fade" id="confirm" tab-index="-1" role="dialog" aria-hidden="true" aria-labelledby="confirm-modal">
+						<div class="modal-dialog modal-dialog-centered" role="center">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title text-center" id="confirm-modal">Sign Up Successful!</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									
+								</div>
+								<div class="modal-body">
+									<p>We Hope to See You in Class!</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+							
+						</div>
+	
+					</div>
+					<!---<div class="form-row">
+						<div class="col-lg-10">
+							<button id="checkout-button" type="button" class="payment-button btn btn-dark SignUpButton">Donate</button>
+						</div>	
+					</div>---->
 					
 				</form>
 
 				
 			</div>
 			<div class="col-lg-7">
-				<img src="img/SignUpPic.jpg" class="img-fluid SignUpImg">
+				<img src="SignUpPic.jpg" class="img-fluid SignUpImg">
 			</div>
 		</div>
 	</div>
 </section>
 <script type="text/javascript">
+	var stripe = Stripe('pk_test_51HQynJGNtnHiw0AlWo2s4QLMKmEyuxcEP8ab6HQlWqQd8enJgr8IXmnHLhSy6IyWZUunxh7Tv3pU28tLLc0Wifvz00jKEEa1XX');
+				    var checkoutButton = document.getElementById('checkout-button');
+				    checkoutButton.addEventListener('click', function() {
+				        
+		            	fetch('https://nm4fvzi64a.execute-api.us-west-2.amazonaws.com/prod/stripeshopapi', {
+					    	method: 'POST',
+					    })
+					    
+					    .then(function(response) {
+					    	  
+					          return response.json();
+
+					    })
+					    .then(function(session) {
+					    	  console.log(session);
+					          return stripe.redirectToCheckout({ sessionId: session.sessionId });
+					    })
+					    .then(function(result) {
+					          // If `redirectToCheckout` fails due to a browser or network
+					          // error, you should display the localized error message to your
+					          // customer using `error.message`.
+					        if (result.error) {
+					            alert(result.error.message);
+					         }
+					     })
+					    .catch(function(error) {
+
+					        console.error('Error:', error);
+					     	});
+		            	
+					    
+
+				    });
 	function writeToTable(){
 		const URL = "https://nm4fvzi64a.execute-api.us-west-2.amazonaws.com/prod/signuplambda";
 				  		//data validation
 				  		var Namere = /[A-Za-z]{1}[A-Za-z]/;
 				            if (!Namere.test($("#name-input").val())) {
-				                         alert ("Name can not less than 2 char");
+				                         alert ("Name can not be less than 2 characters");
 				                return;
 				            }
 		            	var mobilere = /[0-9]{10}/;
@@ -118,6 +189,11 @@
 				                alert ("Please enter a valid mobile number");
 				                return;
 				            }
+				        $('#confirm').modal({
+				        	keyboard: true,
+				        	backdrop: true,
+				        	show: true
+				        })
 				        let name = $("#name-input").val();
 				        let phone = $("#phone-input").val();
 				        let email = $("#email-input").val();
@@ -167,14 +243,11 @@
 
 
 
-<script src="js/jquery-3.5.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
+	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
-	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
+	
 
 </body>
 </html>
