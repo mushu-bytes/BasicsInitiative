@@ -157,7 +157,7 @@
 
 					    })
 					    .then(function(session) {
-					    	  console.log(session);
+					    	  
 					          return stripe.redirectToCheckout({ sessionId: session.sessionId });
 					    })
 					    .then(function(result) {
@@ -197,6 +197,8 @@
 				        let name = $("#name-input").val();
 				        let phone = $("#phone-input").val();
 				        let email = $("#email-input").val();
+				        //let heartbeat = "cold";
+				        
 				        if (document.getElementById('class-date-1').checked) {
 				        	date = $("#class-date-1").val();
 				        }
@@ -213,6 +215,7 @@
 				        	phone: phone,
 				        	email: email,
 				        	date: date
+				        	//heartbeat: heartbeat
 				        	
 				        };
 				        $.ajax({

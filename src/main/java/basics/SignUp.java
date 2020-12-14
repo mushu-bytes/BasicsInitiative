@@ -48,7 +48,15 @@ public class SignUp implements RequestHandler<APIGatewayProxyRequestEvent, APIGa
 
 
     public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent input, Context context) {
+        //coldstart pings
+        if (input.getBody() == null){
+            System.out.println("end the function");
+            return new APIGatewayProxyResponseEvent()
+                    .withBody("ColdStart")
+                    .withStatusCode(200);
+        }
         try {
+            System.out.println(input);
             //parses the json body
             ObjectMapper mapper = new ObjectMapper();
             jMap = mapper.readValue(input.getBody(), Map.class);
@@ -59,12 +67,11 @@ public class SignUp implements RequestHandler<APIGatewayProxyRequestEvent, APIGa
                     .withStatusCode(500)
                     .withBody("NOT OK");
         }
+
+
         UUID uuid = new UUID(32, 32).randomUUID();
         id = uuid.toString();
-        System.out.println(jMap.get("date"));
-        System.out.println(jMap.get("email"));
-        System.out.println(jMap.get("phone"));
-        System.out.println(jMap.get("name"));
+
 
         AttributeValue orderId = new AttributeValue().withS(id);
         AttributeValue name = new AttributeValue().withS(jMap.get("name"));
